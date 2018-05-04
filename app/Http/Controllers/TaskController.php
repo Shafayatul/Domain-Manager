@@ -164,7 +164,7 @@ class TaskController extends Controller
                     'tasks.description as description',
                     'users.name as name_assign_to'
                 )
-                ->leftJoin('users', 'tasks.assign_to', '=', 'users.id');;
+                ->leftJoin('users', 'tasks.assign_to', '=', 'users.id');
 
         return Datatables::of($tasks)
             ->addColumn('action', function($row){

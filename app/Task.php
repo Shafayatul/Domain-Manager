@@ -34,5 +34,6 @@ class Task extends Model
      */
     protected $fillable = ['user_id', 'assign_to', 'due_date', 'domain_name', 'task_type', 'status', 'description'];
 
+    protected static $logAttributes = ['user_id', 'assign_to', 'due_date', 'domain_name', 'task_type', 'status', 'description'];
     
 }

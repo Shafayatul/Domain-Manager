@@ -59,6 +59,12 @@ Route::group(['middleware' => ['permission:Admin Ticket Management']], function 
 });
 
 //only admin
+Route::group(['middleware' => ['permission:Activity Log']], function () {
+    Route::get('/datatable/activity/index', 'ActivityController@datatable_activity_index');
+    Route::get('/activity/index', 'ActivityController@index');
+});
+
+//only admin
 Route::group(['middleware' => ['permission:Manage Task']], function () {
     Route::resource('/note',  'NoteController');
     Route::post('/task/ajax_delete', 'TaskController@ajax_delete');

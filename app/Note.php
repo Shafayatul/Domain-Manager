@@ -27,5 +27,5 @@ class Note extends Model
      */
     protected $fillable = ['user_id', 'task_id', 'note'];
 
-    
+    protected static $logAttributes = ['user_id', 'task_id', 'note'];
 }

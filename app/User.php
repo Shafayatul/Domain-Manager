@@ -11,6 +11,7 @@ class User extends Authenticatable
 {
     use Notifiable, HasRoles, LogsActivity;
 
+    protected static $logAttributes = ['name', 'email'];
     /**
      * The attributes that are mass assignable.
      *

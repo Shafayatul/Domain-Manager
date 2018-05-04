@@ -11,4 +11,9 @@ class Ticket extends Model
     * laravel activity log
     */
     use LogsActivity;
+
+    protected $fillable = ['subject', 'user_id', 'assigned_to'];
+
+    protected static $logAttributes = ['subject', 'user_id', 'assigned_to'];
+
 }
