@@ -147,6 +147,17 @@
                         </ul>
                     </li>
                     @endcan
+
+                    @can('Activity Log')
+                    <li>
+                        <a href="{{ url('/activity/index') }}">
+                            <i class="material-icons">local_activity</i>
+                            <span>Activity Log</span>
+                        </a>
+                    </li>
+                    @endcan
+
+
                 </ul>
             </div>
             <!-- #Menu -->
