@@ -63,6 +63,12 @@ Route::group(['middleware' => ['permission:Activity Log']], function () {
     Route::get('/datatable/activity/index', 'ActivityController@datatable_activity_index');
     Route::get('/activity/index', 'ActivityController@index');
 });
+//only admin
+Route::group(['middleware' => ['permission:Manage User']], function () {
+    // Route::get('/datatable/activity/index', 'ActivityController@datatable_activity_index');
+    Route::post('/admin/user/store', 'UserController@admin_user_store');
+    Route::get('/admin/user/create', 'UserController@admin_user_create');
+});
 
 //only admin
 Route::group(['middleware' => ['permission:Manage Task']], function () {

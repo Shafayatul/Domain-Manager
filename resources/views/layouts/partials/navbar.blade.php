@@ -142,7 +142,10 @@
                         </a>
                         <ul class="ml-menu">
                             <li>
-                                <a href="">Add User</a>
+                                <a href="{{ url('/admin/user/create') }}">Add User</a>
+                            </li>
+                            <li>
+                                <a href="{{ url('') }}">User List</a>
                             </li>
                         </ul>
                     </li>

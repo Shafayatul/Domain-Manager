@@ -10,7 +10,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                     @if(Session::has('success'))
+                    @if(Session::has('success'))
                         <div class="alert alert-success">
                             <strong>Success!</strong> {{ Session::get('success') }}
                         </div>
